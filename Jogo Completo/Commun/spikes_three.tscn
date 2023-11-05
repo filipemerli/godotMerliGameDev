@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3wqby8heb8dn"]
+
+[ext_resource type="Script" path="res://Commun/spikes_three.gd" id="1_m5xnx"]
+[ext_resource type="PackedScene" uid="uid://c5gvdvuko6kvl" path="res://Commun/spikes.tscn" id="1_n8jb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfqjt"]
+size = Vector2(54, 9)
+
+[node name="spikesThree" type="Area2D"]
+position = Vector2(-18, 0)
+script = ExtResource("1_m5xnx")
+
+[node name="spikes" parent="." instance=ExtResource("1_n8jb2")]
+position = Vector2(18, 0)
+
+[node name="spikes2" parent="." instance=ExtResource("1_n8jb2")]
+
+[node name="spikes3" parent="." instance=ExtResource("1_n8jb2")]
+position = Vector2(36, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 4.5)
+shape = SubResource("RectangleShape2D_gfqjt")

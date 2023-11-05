@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs38ikxq1anhx"]
+
+[ext_resource type="PackedScene" uid="uid://cffomdiy4rsnk" path="res://Commun/block_midddle.tscn" id="1_8v77n"]
+[ext_resource type="Texture2D" uid="uid://cpsneu206xo4h" path="res://Assets/Blocks/tile_0022.png" id="2_x5sb2"]
+
+[node name="floor-mid" instance=ExtResource("1_8v77n")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_x5sb2")

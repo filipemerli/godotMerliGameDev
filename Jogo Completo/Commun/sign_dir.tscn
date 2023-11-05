@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cslnqe1dy2jin"]
+
+[ext_resource type="Texture2D" uid="uid://bjxk6lnq2d28c" path="res://Assets/Decoration/tile_0088.png" id="1_k0un1"]
+
+[node name="signDir" type="Sprite2D"]
+texture = ExtResource("1_k0un1")

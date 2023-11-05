@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdhcv3mypaejs"]
+
+[ext_resource type="Texture2D" uid="uid://bjp635lribrtv" path="res://Assets/Commun/character_0006.png" id="1_aadab"]
+[ext_resource type="Script" path="res://Commun/player.gd" id="1_rqs2t"]
+[ext_resource type="Texture2D" uid="uid://dvtfvlareo1i3" path="res://Assets/Commun/character_0007.png" id="2_40sk0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3khk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aadab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_40sk0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_40sk0")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aadab")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_40sk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_aadab")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aadab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_40sk0")
+}],
+"loop": true,
+"name": &"walkFast",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_flmgv"]
+radius = 8.0
+height = 22.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_rqs2t")
+
+[node name="animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3khk0")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_flmgv")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv63gru76o4ah"]
+
+[ext_resource type="Texture2D" uid="uid://b1svibj8pi0i3" path="res://Assets/Decoration/tile_0125.png" id="1_crmhq"]
+
+[node name="bigPlant" type="Sprite2D"]
+texture = ExtResource("1_crmhq")

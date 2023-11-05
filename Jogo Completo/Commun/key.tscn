@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://y1hjco2mf1md"]
+
+[ext_resource type="Texture2D" uid="uid://cv5emlg5sp1oi" path="res://Assets/Commun/tile_0027.png" id="1_8csuv"]
+[ext_resource type="Script" path="res://Commun/key.gd" id="1_25wdp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vxfv"]
+size = Vector2(16, 9)
+
+[node name="key" type="Area2D"]
+script = ExtResource("1_25wdp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8csuv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_3vxfv")

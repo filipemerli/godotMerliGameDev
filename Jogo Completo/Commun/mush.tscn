@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://7so4toaepyqk"]
+
+[ext_resource type="Texture2D" uid="uid://bgvnh5215rc5y" path="res://Assets/Decoration/tile_0128.png" id="1_gy8gh"]
+
+[node name="Mush" type="Sprite2D"]
+texture = ExtResource("1_gy8gh")

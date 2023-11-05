@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://2jkiicv4018l"]
+
+[ext_resource type="Script" path="res://Commun/door.gd" id="1_aoihv"]
+[ext_resource type="Texture2D" uid="uid://bjuweiohdf6ph" path="res://Assets/Commun/tile_0110.png" id="1_q5fkn"]
+[ext_resource type="Texture2D" uid="uid://c77jq0mj61g03" path="res://Assets/Commun/tile_0130.png" id="2_a2nem"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71s4o"]
+size = Vector2(16, 22)
+
+[node name="door" type="Area2D"]
+script = ExtResource("1_aoihv")
+
+[node name="cima" type="Sprite2D" parent="."]
+position = Vector2(0, -18)
+texture = ExtResource("1_q5fkn")
+
+[node name="porta" type="Sprite2D" parent="."]
+texture = ExtResource("2_a2nem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_71s4o")
