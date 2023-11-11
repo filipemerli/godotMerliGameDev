@@ -45,3 +45,8 @@ func setFallAnim():
 	
 func setIdleAnim():
 	anim.set_frame_and_progress(0, 0.0)
+	
+func hit():
+	var cam = get_node("%camLvlFour")
+	if cam is Camera2D:
+		cam.shake()
