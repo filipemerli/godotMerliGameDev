@@ -19,9 +19,7 @@ func shake():
 func _process(delta):
 	if shakeStrength > 0.05:
 		shakeStrength = lerp(shakeStrength, 0.0, shakeFade * delta)
-		var vec = randomOffset()
-		print(vec)
-		offset = vec
+		offset = randomOffset()
 
 func _physics_process(delta):
 	if player:
