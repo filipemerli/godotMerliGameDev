@@ -49,4 +49,4 @@ func setIdleAnim():
 func hit():
 	var cam = get_node("%camLvlFour")
 	if cam is Camera2D:
-		cam.shake()
+		cam.emit_signal("shakeCam")
