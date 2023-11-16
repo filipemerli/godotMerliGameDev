@@ -9,6 +9,7 @@ var go_left: bool = false
 @export_range(0.0, 1.0) var friction = 0.5
 @export_range(0.0 , 1.0) var acceleration = 0.25
 var walkCounter: int = 0
+const fallingLabelScene = preload("res://Commun/damage_label.tscn")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -47,6 +48,9 @@ func setIdleAnim():
 	anim.set_frame_and_progress(0, 0.0)
 	
 func hit():
+	var label = fallingLabelScene.instantiate()
+	owner.add_child(label)
+	label.position = position
 	var cam = get_node("%camLvlFour")
 	if cam is Camera2D:
 		cam.emit_signal("shakeCam")

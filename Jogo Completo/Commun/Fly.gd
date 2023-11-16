@@ -22,5 +22,5 @@ func fire():
 	var b = bullet.instantiate()
 	owner.add_child.call_deferred(b)
 	b.transform = marker.global_transform
-	await get_tree().create_timer(0.7).timeout
+	await get_tree().create_timer(0.2).timeout
 	fire()

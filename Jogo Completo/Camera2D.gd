@@ -10,8 +10,8 @@ func _ready():
 	limit_left = -289
 	limit_right = 910
 
-func _process(_delta):
-	print("My Process here")
+func _process(delta):
+	super._process(delta)
 
 func triggerShake():
 	shake()

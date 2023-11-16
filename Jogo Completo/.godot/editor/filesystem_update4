@@ -1,12 +1,5 @@
-res://LevelThree/level_three.tscn
-res://bulle.gd
-res://ScriptsCommun/testCam.gd
 res://LevelOne/level_one.tscn
+res://bulle.gd
 res://LevelTwo/level_two.tscn
+res://LevelThree/level_three.tscn
 res://level_four.tscn
-res://LevelThree/Camera2D.gd
-res://LevelTwo/level_two.gd
-res://Camera2D.gd
-res://Commun/player.gd
-res://Commun/player.tscn
-res://ScriptsCommun/MyCustomCam.gd
